@@ -3,64 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Partha's professional GitHub Pages profile">
-    <title>Parthasarathi S - Profile</title>
+    <meta name="description" content="Parthasarathi S - Academic Portfolio">
+    <title>Parthasarathi S - Academic Portfolio</title>
     <style>
+        :root {
+            --primary-color: #007acc;
+            --secondary-color: #222;
+            --bg-color: #f4f4f4;
+            --card-bg: #fff;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
         }
         header {
-            background-color: #222;
+            background: linear-gradient(135deg, var(--primary-color), #005b99);
             color: white;
-            padding: 20px 0;
+            padding: 30px 10px;
             text-align: center;
+        }
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 10px;
+            object-fit: cover;
         }
         header h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 2rem;
         }
         header p {
-            margin: 5px 0 0;
-            font-size: 1.1em;
+            margin: 5px 0;
+            font-size: 1.1rem;
         }
         main {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 20px auto;
             padding: 0 20px;
         }
         section {
-            background: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
-        section h2 {
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+        /* Card Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
             margin-top: 0;
-            color: #007acc;
+            color: var(--primary-color);
+        }
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
         }
         a {
-            color: #007acc;
+            color: var(--primary-color);
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        footer {
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9em;
-            background: #222;
-            color: white;
-        }
     </style>
 </head>
 <body>
+
     <header>
+        <img src="profile.jpg" alt="Parthasarathi S">
         <h1>Parthasarathi S</h1>
         <p>Assistant Professor - Mechatronics | Embedded Systems | Python Developer</p>
     </header>
@@ -73,25 +105,55 @@
 
         <section>
             <h2>Skills</h2>
-            <ul>
-                <li>Embedded Systems Development</li>
-                <li>PCB Design</li>
-                <li>Microcontroller Programming</li>
-                <li>Python Development</li>
-                <li>Research & Technical Writing</li>
-            </ul>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Embedded Systems</h3>
+                    <p>Design and development of firmware for microcontrollers and hardware interfaces.</p>
+                </div>
+                <div class="card">
+                    <h3>PCB Design</h3>
+                    <p>Expertise in PCB layout and design using modern CAD tools.</p>
+                </div>
+                <div class="card">
+                    <h3>Python Development</h3>
+                    <p>Automation, data analysis, and backend development with Python.</p>
+                </div>
+                <div class="card">
+                    <h3>Research</h3>
+                    <p>Publishing technical papers, conducting experiments, and guiding projects.</p>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h2>Connect With Me</h2>
+            <h2>Projects & Research</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Smart IoT Controller</h3>
+                    <p>Developed a low-power IoT control system with real-time monitoring.</p>
+                </div>
+                <div class="card">
+                    <h3>Autonomous Mobile Robot</h3>
+                    <p>Designed navigation and control algorithms for a self-guided robot.</p>
+                </div>
+                <div class="card">
+                    <h3>Energy-Efficient Embedded System</h3>
+                    <p>Created firmware optimizing power usage in industrial systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
             <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">linkedin.com/in/your-linkedin-id</a></p>
             <p>GitHub: <a href="https://github.com/parthasarathis" target="_blank">github.com/parthasarathis</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">linkedin.com/in/your-linkedin-id</a></p>
         </section>
     </main>
 
     <footer>
         &copy; 2025 Parthasarathi S - All Rights Reserved
     </footer>
+
 </body>
 </html>
